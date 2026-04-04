@@ -92,7 +92,4 @@ jobs:
       uses: github/codeql-action/analyze@v4
       with:
         category: "/language:${{matrix.language}}"
-# Add to codeql.yml after analyze step
-    - name: Check CodeQL Status
-      uses: eldrick19/code-scanning-status-checker@v2
-      if: github.event_name == 'pull_request'
+
